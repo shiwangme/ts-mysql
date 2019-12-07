@@ -1,0 +1,9 @@
+node_modules/
+
+dist/
+demo/
+lib/
+
+.DS_Store
+*.log
+*.log.*

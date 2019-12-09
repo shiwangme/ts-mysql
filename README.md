@@ -29,6 +29,24 @@ const { pool } = require('@shiwangme/mysql');
 })();
 ```
 
+TS：
+
+```typescript
+import { pool, PoolConfig } from '@shiwangme/mysql';
+
+const config: PoolConfig = {
+  host: 'localhost',
+  user: 'root',
+  password: 'root'
+};
+
+const mysql = pool(config);
+
+mysql.query('select 1').then((x: object) => {
+  console.log(x);
+});
+```
+
 ### CONNECTION
 
 ```js

@@ -6,10 +6,10 @@ import { Pool, Connection } from 'mysql';
 export type CachedPool = { [key: string]: Function };
 export type CachedConnection = { [key: string]: Function };
 
-export const md5 = (str: string): string =>
+export const jsonMd5 = (obj: object): string =>
   crypto
     .createHash('md5')
-    .update(`${str}`)
+    .update(JSON.stringify(obj))
     .digest('hex');
 
 export const makeFn = (

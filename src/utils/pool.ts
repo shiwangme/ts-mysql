@@ -1,5 +1,5 @@
 import mysql, { PoolConfig, Pool } from 'mysql';
-import { md5, makeFn, CachedPool } from './utils';
+import { jsonMd5, makeFn, CachedPool } from './utils';
 
 const db: { [key: string]: Pool } = {};
 
@@ -8,7 +8,7 @@ const createPool = (key: string, options: PoolConfig): void => {
 };
 
 export const pool = (options: PoolConfig = {}): CachedPool => {
-  const key = md5(JSON.stringify(options));
+  const key = jsonMd5(options);
   if (!db[key]) {
     createPool(key, options);
   }

@@ -1,5 +1,5 @@
 import mysql, { ConnectionConfig, Connection } from 'mysql';
-import { md5, makeFn, CachedConnection } from './utils';
+import { jsonMd5, makeFn, CachedConnection } from './utils';
 
 const db: { [key: string]: Connection } = {};
 
@@ -10,7 +10,7 @@ const createConnection = (key: string, options: ConnectionConfig): void => {
 export const connection = (
   options: ConnectionConfig = {}
 ): CachedConnection => {
-  const key = md5(JSON.stringify(options));
+  const key = jsonMd5(options);
   if (!db[key]) {
     createConnection(key, options);
   }

@@ -8,7 +8,6 @@
     "build": "tsc",
     "lint": "eslint --ext .js,.ts --fix src",
     "prepublish": "npm run build",
-    "start": "ts-node src",
     "test": "jest --forceExit --coverage --verbose --detectOpenHandles"
   },
   "dependencies": {

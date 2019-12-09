@@ -1,6 +1,6 @@
 {
   "name": "@shiwangme/mysql",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "TypeScript MySQL 封装优化",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -8,7 +8,7 @@
     "build": "tsc",
     "lint": "eslint --ext .js,.ts --fix src",
     "prepublish": "npm run build",
-    "test": "jest --forceExit --coverage --verbose --detectOpenHandles"
+    "test": "jest --forceExit --coverage --verbose --detectOpenHandles --config jest.config.json"
   },
   "dependencies": {
     "debug": "^4.1.1",

@@ -1,15 +1,9 @@
 import { promisify } from 'util';
-import crypto from 'crypto';
 import debug from 'debug';
 import mysql, { PoolConfig, Pool } from 'mysql';
+import { md5 } from './utils';
 
 type CachedPool = { [key: string]: Function };
-
-const md5 = (str: string): string =>
-  crypto
-    .createHash('md5')
-    .update(`${str}`)
-    .digest('hex');
 
 const db: { [key: string]: Pool } = {};
 

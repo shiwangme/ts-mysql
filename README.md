@@ -1,1 +1,3 @@
 # @shiwangme/mysql
+
+[![github](https://img.shields.io/github/followers/willin.svg?style=social&label=Followers)](https://github.com/willin) [![npm](https://img.shields.io/npm/v/@shiwangme/mysql.svg)](https://npmjs.org/package/@shiwangme/mysql) [![npm](https://img.shields.io/npm/dt/@shiwangme/mysql.svg)](https://npmjs.org/package/@shiwangme/mysql) [![codebeat badge](https://codebeat.co/badges/13b9d4ff-2c65-41a2-ae6b-630f3daecb76)](https://codebeat.co/projects/github-com-shiwangme-ts-mysql-master) [![Build Status](https://travis-ci.org/shiwangme/ts-mysql.svg?branch=master)](https://travis-ci.org/shiwangme/ts-mysql)

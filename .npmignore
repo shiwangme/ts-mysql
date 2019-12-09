@@ -2,7 +2,6 @@ node_modules/
 
 dist/
 demo/
-lib/
 coverage/
 
 .DS_Store

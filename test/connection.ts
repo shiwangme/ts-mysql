@@ -1,8 +1,8 @@
 import 'should';
-import { pool } from '../src';
+import { connection } from '../src';
 import config from './_config';
 
-const client = pool(config);
+const client = connection(config);
 
 test('query', async (): Promise<void> => {
   const rows = await client.query('SELECT 1');

@@ -1,14 +1,15 @@
 {
   "name": "@shiwangme/mysql",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "TypeScript MySQL 封装优化",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "lint": "eslint --ext .js,.ts --fix src",
+    "prepublish": "npm run build",
     "start": "ts-node src",
-    "test": "echo test"
+    "test": "jest --forceExit --coverage --verbose --detectOpenHandles"
   },
   "dependencies": {
     "debug": "^4.1.1",
@@ -21,6 +22,7 @@
     "@types/mysql": "^2.15.8",
     "@types/node": "^12.12.14",
     "@types/should": "^13.0.0",
+    "coveralls": "^3.0.9",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.18.2",
     "jest": "^24.9.0",
